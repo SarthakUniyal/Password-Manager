@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Manager</title>
+</head>
+<body style="background-color: rgb(240, 244, 218);">
+    <nav>
+        <div class="logo"><img src="locked.png" alt=""></div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Password Manager</h1>
+        <p style="color: rgb(237, 143, 245); font-weight: bold; font-style: italic;">A password manager is a critical tool for any project or individual 
+            looking to enhance their online security and manage multiple login 
+            credentials effectively. which is to enhance online security while providing the convenience 
+            of managing passwords effectively. It highlights the dual benefits 
+            of security and convenience, making it an attractive tool for individuals 
+            and organizations concerned about their online safety.</p>
+
+        <h2>Your Password <span id="alert">(Copied)</span></h2>
+        <table>
+            <tr>
+              <th>Website</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Delete</th>
+            </tr>
+        </table>
+          
+        <h3>Add Password</h3>
+            <form action="/submit" method="post">
+                <!-- Text input for website -->
+                <label class="labels" for="website">Website:</label>
+                <input class="inputs" type="text" id="website" name="username" required>
+                <br><br>
+
+                <!-- Text input for username -->
+                <label class="labels" for="username">Username:</label>
+                <input class="inputs" type="text" id="username" name="username" required>
+                <br><br>
+            
+                <!-- Password input -->
+                <label class="labels" for="password">Password:</label>
+                <input class="inputs" type="password" id="password" name="password" required>
+                <br><br>
+            
+                <button class="btn" type="submit">Submit</button>
+              </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -94,3 +94,12 @@ document.querySelector(".btn").addEventListener("click", (e) => {
     }
     showPasswords()
 })
+
+
+const menuIcon = document.querySelector('.btn_one');
+const navMenu = document.querySelector('nav ul');
+
+menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+});
+

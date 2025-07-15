@@ -1,59 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=Lilita+One&family=Oswald&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tektur&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Password Manager</title>
 </head>
-<body style="background-color: rgb(240, 244, 218);">
+
+<body>
     <nav>
-        <div class="logo"><img src="locked.png" alt=""></div>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
+        <div class="logo"><span>PassKey</span>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="https://sarthakuniyal.github.io/Portfolio-Website/">Portfolio</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+
+        <input type="checkbox" id="check" />
+        <div class="btn_one">
+            <label for="check" style="color: white">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
     </nav>
+
     <div class="container">
         <h1>Password Manager</h1>
-        <p style="color: rgb(237, 143, 245); font-weight: bold; font-style: italic;">A password manager is a critical tool for any project or individual 
-            looking to enhance their online security and manage multiple login 
-            credentials effectively. which is to enhance online security while providing the convenience 
-            of managing passwords effectively. It highlights the dual benefits 
-            of security and convenience, making it an attractive tool for individuals 
-            and organizations concerned about their online safety.</p>
+        <p>My password manager project serves as a simple yet effective tool for organizing passwords in a clean,
+            tabular format. By allowing users to sort their passwords in an easily accessible manner, it helps eliminate
+            the chaos of scattered notes and forgotten credentials. While it doesn't incorporate advanced security
+            features like encryption, it provides a straightforward interface where users can quickly input, view, and
+            manage their passwords without hassle. </p>
 
-        <h2>Your Password <span id="alert">(Copied)</span></h2>
+        <h1 class="space-heading-top">Your Password <span id="alert">(Copied)</span></h1>
+
         <table>
             <tr>
-              <th>Website</th>
-              <th>Username</th>
-              <th>Password</th>
-              <th>Delete</th>
+                <th>Website</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Delete</th>
             </tr>
         </table>
-          
-        <h3>Add Password</h3>
-            <form action="/submit" method="post">
+
+        <h1 class="space-heading-top" id="space-heading-top1">Add Password</h1>
+        <form action="/submit" method="post">
+            <div class="form-container">
                 <!-- Text input for website -->
-                <label class="labels" for="website">Website:</label>
-                <input class="inputs" type="text" id="website" name="username" required>
-                <br><br>
+                <div class="input-container">
+                    <input class="inputs" type="text" id="website" name="username" placeholder="Enter The Website"
+                        required>
+                </div>
 
                 <!-- Text input for username -->
-                <label class="labels" for="username">Username:</label>
-                <input class="inputs" type="text" id="username" name="username" required>
-                <br><br>
-            
+                <div class="input-container">
+                    <input class="inputs" type="text" id="username" name="username" placeholder="Enter The username"
+                        required>
+                </div>
+
                 <!-- Password input -->
-                <label class="labels" for="password">Password:</label>
-                <input class="inputs" type="password" id="password" name="password" required>
-                <br><br>
-            
-                <button class="btn" type="submit">Submit</button>
-              </form>
+                <div class="input-container">
+                    <input class="inputs" type="password" id="password" name="password" placeholder="Enter The Password"
+                        required>
+                </div>
+
+                <div>
+                    <button class="btn" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
